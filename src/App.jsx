@@ -1,5 +1,5 @@
 import React, { Children } from 'react'
-import { BrowserRouter as Router, Route, Routes, useNavigate, Navigate } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, useNavigate, Navigate } from "react-router-dom";
 import Home from './pages/home/Home';
 import Order from './pages/order/Order';
 import Cart from './pages/cart/Cart';
@@ -51,7 +51,7 @@ function App() {
               <UpdateProduct />
             </ProtectedRouteForAdmin>
           } />
-          <Route path='*' element={<Nopage />} />
+          <Route path='/*' element={<Nopage />} />
         </Routes>
         <ToastContainer />
       </Router>
